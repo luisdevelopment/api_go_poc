@@ -2,6 +2,7 @@ package ProductService
 
 import(
 	"ProductModel"
+	"ProductDb"
 	"strconv"
 	"fmt"
 )
@@ -14,6 +15,7 @@ func CreateProduct(p Product) *Product {
 		Name : p.Name,
 		Valor : p.Valor,
 	}
+	ProductDb.CreateUser()
 	return p2
 }
 
